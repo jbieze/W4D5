@@ -9,14 +9,15 @@
   </head>
 
   <body>
-    <h1>Music App</h1>
-    <% if logged_in? %>
-      <%= button_to "Log Out", session_url, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_session_url %>
-      <%= link_to "Sign Up", new_user_url %>
-    <% end %>
-
+    <div class="log-in-out">
+      <h1 class="headline">Music App</h1>
+      <% if logged_in? %>
+        <%= button_to "Log Out", session_url, method: :delete %>
+      <% else %>
+        <%= link_to "Sign In", new_session_url %>
+        <%= link_to "Sign Up", new_user_url %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

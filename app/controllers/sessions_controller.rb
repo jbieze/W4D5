@@ -1,4 +1,5 @@
-class SessionsController
+class SessionsController < ApplicationController
+  before_action :require_user!
 
   def new
     render :new

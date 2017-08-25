@@ -1,4 +1,5 @@
-class UsersController
+class UsersController < ApplicationController
+  before_action :require_user!
 
   def new
     @user = User.new

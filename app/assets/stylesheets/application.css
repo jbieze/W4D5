@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+ h1 {
+   font-family: 'Bungee Inline', cursive;
+ }
+
+.log-in-out {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .button {
+  border-radius: 5px;
+  background-color: black;
+ }

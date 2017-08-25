@@ -1,0 +1,32 @@
+<h1 class='page-header'>New Album from <%= @band.name %>.</h1>
+
+<form class='form' action="albums_url" method="post">
+
+  <p>
+    <label for='album-name'>Name</label>
+    <input id='album-name' type="text" name="album[name]" value="<%= album.name %>">
+  </p>
+
+  <p>
+    <label for='album-band'>Band</label>
+    <select id='album-band' name="album[band_id]">
+        <% Band.all.each do |band| %>
+            <option><%= band.name %></option>
+        <% end %>
+    </select>
+  </p>
+
+  <p>
+    <label for="album_live_t">Live</label>
+    <input type="radio" name="album[live]" value="t" id="album_live_t">
+    <label for="album_live_f">Studio</label>
+    <input type="radio" name="album[live]" value="f" id="album_live_f">
+  </p>
+
+  <p>
+    <label for='album-year'>Year</label>
+    <input id='album-year' type="number" name="album[year]" value="<%= album.year %>">
+  </p>
+
+  <input type="submit" value="UPDATE">
+</form>

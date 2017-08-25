@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resource :session, only: [:new, :create, :destroy]
-  resource :user, only: [:show, :new, :create]
+  resources :user, only: [:show, :new, :create]
+  resources :band
+  resources :album, except: :index
+  resources :track, except: :index
 end
